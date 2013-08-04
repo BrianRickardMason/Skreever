@@ -16,11 +16,11 @@ class VM(object):
         mLogger:         A logger.
 
     """
-    
+
     def __init__(self):
         self.mLogger = logging.getLogger("VMLogger")
         self.mLogger.setLevel(logging.DEBUG)
-        
+
         self.mCellRepository = CellRepository.CellRepository()
 
         self.mLogger.debug("Creating cells.")
@@ -28,7 +28,7 @@ class VM(object):
             cellName = "Cell" + str(i)
             self.mLogger.debug("Creating a cell: " + cellName + ".")
             self.mCellRepository.addCell(Cell.Cell(cellName))
-        
+
         self.mLogger.debug("Creating processors.")
         self.mProcessors = []
         for i in range(10):
@@ -46,7 +46,7 @@ class VM(object):
                     if cell != None:
                         self.mProcessors[i].setActiveCell(cell)
             time.sleep(1)
-            
+
         for i in range(10):
             self.mProcessors[i].join()
 

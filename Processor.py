@@ -4,26 +4,26 @@ import threading
 
 class Processor(threading.Thread):
     """Processor class.
-    
+
     Attributes:
         mCell:   A processed cell.
         mLogger: A logger.
         mName:   A human readable name.
-    
+
     """
-    
+
     def __init__(self, aName):
         self.mLogger = logging.getLogger("ProcessorLogger")
         self.mLogger.setLevel(logging.DEBUG)
 
         self.mName = aName
         self.mCell = None
-        
+
         threading.Thread.__init__(self)
-    
+
     def setActiveCell(self, aCell):
         self.mCell = aCell
-    
+
     def run(self):
         while True:
             self.mLogger.debug(self.mName + ": is working.")
