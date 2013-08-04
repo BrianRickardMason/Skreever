@@ -1,0 +1,7 @@
+# Python specific entries.
+*.py[co]
+
+# Eclipse specific entries.
+.project
+.pydevproject
+.settings
