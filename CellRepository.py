@@ -14,7 +14,7 @@ class CellRepository(object):
 
     def getCell(self):
         for item in self.mCells.items():
-            key, value = item
+            _, value = item
             if value.mUnderProcess == False:
                 if value.mTicksLeft > 0:
                     value.putIntoTheProcessor()
