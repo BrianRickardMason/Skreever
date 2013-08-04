@@ -1,5 +1,5 @@
 class Cell(object):
-    """Cell class
+    """Cell class.
     
     The main construction unit.
     
