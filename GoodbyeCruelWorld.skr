@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cells>
+    <cell>
+        <name>Cell1</name>
+        <code>
+<![CDATA[
+        print("Goodbye, ")
+]]>
+        </code>
+    </cell>
+    <cell>
+        <name>Cell2</name>
+        <dependencies>
+            <cellName>Cell1</cellName>
+        </dependencies>
+        <code>
+<![CDATA[
+        print("Cruel ")
+]]>
+        </code>
+    </cell>
+    <cell>
+        <name>Cell3</name>
+        <dependencies>
+            <cellName>Cell1</cellName>
+            <cellName>Cell2</cellName>
+        </dependencies>
+        <code>
+<![CDATA[
+        print("World!")
+]]>
+        </code>
+    </cell>
+</cells>
