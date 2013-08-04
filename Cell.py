@@ -4,9 +4,12 @@ class Cell(object):
     The main construction unit.
     
     Attributes:
-        mName: Human readable name.
+        mName: A human readable name.
         
     """
     
-    def __init__(self):
-        self.mName = ""
+    def __init__(self, aName):
+        self.mName = aName
+
+    def work(self):
+        print("My name is " + self.mName + ". I am just doing my work.")
